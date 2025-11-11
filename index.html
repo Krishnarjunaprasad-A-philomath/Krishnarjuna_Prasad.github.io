@@ -1,82 +1,249 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theophilus Ehimegbe | Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Theophilus - Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+
+<!-- Fade effect CSS -->
+<style>
+body {
+  background-color: #f9f9f9;
+  color: #1f2937;
+  text-align: justify; /* ✅ Justify all text */
+}
+p {
+  text-align: justify; /* ✅ Ensure paragraphs are justified */
+}
+/* ❌ Remove justification inside contact section */
+#contact, #contact p {
+  text-align: center !important;
+}
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+nav, .bg-gray-800, .bg-gray-700, .bg-gray-900 {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+a, a:hover {
+  color: #f59e0b;
+}
+</style>
 </head>
-<body>
-  <header>
-    <img src="images/profile.jpg" alt="Profile photo" class="profile-img">
-    <h1>Theophilus Ehimegbe</h1>
-    <p>Data Analyst | SQL | Power BI | Python | Excel</p>
-    <div class="socials">
-      <a href="mailto:ehimegbetheophilus999@gmail.com">Email</a> ·
-      <a href="https://linkedin.com/in/theophilusehimegbe">LinkedIn</a> ·
-      <a href="https://github.com/theophilusehimegbe">GitHub</a>
+<body class="font-sans">
+
+<!-- NAVIGATION -->
+<nav class="p-4 flex justify-between items-center border-b border-gray-300">
+<h1 class="text-2xl font-bold">My Portfolio</h1>
+<ul class="hidden md:flex space-x-6">
+<li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+<li><a href="#projects" class="hover:text-yellow-400">Projects</a></li>
+<li><a href="#about" class="hover:text-yellow-400">About Me</a></li>
+<li><a href="#experience" class="hover:text-yellow-400">Experience</a></li>
+<li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+</ul>
+<button id="menu-btn" class="md:hidden">☰</button>
+</nav>
+<ul id="menu" class="hidden flex-col space-y-2 p-4 md:hidden border-b border-gray-300">
+<li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+<li><a href="#projects" class="hover:text-yellow-400">Projects</a></li>
+<li><a href="#about" class="hover:text-yellow-400">About Me</a></li>
+<li><a href="#experience" class="hover:text-yellow-400">Experience</a></li>
+<li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+</ul>
+
+<!-- HERO SECTION -->
+<section id="home" class="fade-section min-h-screen flex flex-col md:flex-row justify-center items-center text-center md:text-left px-4 gap-8">
+  
+  <!-- Profile Picture -->
+  <img src="images/profile.jpg"
+       alt="Theophilus Ehimegbe"
+       class="w-72 h-72 object-cover mb-4 md:mb-0">
+
+  <!-- Text -->
+  <div>
+    <h2 class="text-4xl md:text-6xl font-bold mb-4">
+      Hi, I'm Theophilus Ehimegbe
+    </h2>
+    <p class="text-lg md:text-2xl max-w-2xl mb-6">
+      A data analyst who helps startups, Saas teams, founders and businesses make data driven decisions. Trying to validate an idea, track growth metrics, clean messy data or build dashboards, I have got you covered.
+    </p>
+    <div class="flex flex-col md:flex-row gap-4">
+      <a href="#projects" class="bg-yellow-400 text-gray-900 px-6 py-3 font-semibold rounded hover:bg-yellow-300 transition">
+        View My Work
+      </a>
+      <a href="resume.pdf" target="_blank" rel="noopener" class="border border-yellow-400 text-yellow-400 px-6 py-3 font-semibold rounded hover:bg-yellow-400 hover:text-gray-900 transition">
+        View My Resume
+      </a>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I’m a data analyst passionate about transforming data into actionable business insights. 
-        With a background in Medical Laboratory Science and expertise in tools like SQL, Power BI, and Python, 
-        I help startups and businesses make data-driven decisions.
-      </p>
-    </section>
+</section>
 
-    <section id="projects">
-      <h2>Featured Projects</h2>
+<!-- ABOUT SECTION -->
+<section id="about" class="fade-section py-20 px-4 bg-white">
+<div class="max-w-6xl mx-auto">
+<h3 class="text-3xl font-bold text-yellow-400 mb-12 text-center">About Me</h3>
+<div class="grid md:grid-cols-2 gap-8 text-gray-700">
+<div class="p-6 rounded shadow border border-gray-200">
+<h4 class="text-xl font-semibold mb-4">Who Am I</h4>
+<p>
+I am a data analyst specializing in transforming complex datasets into clear, actionable insights that drive informed decisions.
+With a background in Medical Laboratory Science, I bring a unique blend of analytical precision and technical expertise in SQL, Python, Excel, and Power BI to deliver impactful solutions and compelling data stories.
+</p>
+</div>
+<div class="p-6 rounded shadow border border-gray-200">
+<h4 class="text-xl font-semibold mb-4">My Approach</h4>
+<p>
+I focus on clarity, accuracy, and relevance, ensuring every analysis addresses real business needs. I prioritize clean, well-structured data, insightful storytelling, and visually engaging reports while continuously evolving my methods to stay aligned with modern tools and industry best practices.
+</p>
+</div>
+</div>
+</div>
+</section>
 
-      <div class="project">
-        <h3>📞 Call Center Report</h3>
-        <p>
-          Created a Power BI dashboard to analyze call volume, resolution time, and customer satisfaction metrics, 
-          leading to actionable insights that reduced response delays by 15%.
+<!-- LOTTIE CARTOON ANIMATION -->
+<section id="data-animation" class="fade-section py-16 px-4 bg-white">
+<div class="max-w-4xl mx-auto text-center">
+<div id="lottie-analytics" class="w-full h-96 mx-auto"></div>
+</div>
+</section>
+
+<script>
+const animation = lottie.loadAnimation({
+container: document.getElementById('lottie-analytics'),
+renderer: 'svg',
+loop: true,
+autoplay: true,
+path: 'https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json'
+});
+</script>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="fade-section py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-3xl font-bold text-yellow-400 mb-12 text-center">Projects</h3>
+    
+    <!-- Responsive grid -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Project 1: Call Center Analysis -->
+      <div class="p-4 rounded shadow border border-gray-200 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+        <img src="images/call-center-screenshot.JPG" alt="Call Center Report Project" class="w-full h-48 object-cover mb-4 rounded">
+        <h4 class="text-xl font-semibold mb-2">Call Center Report</h4>
+        <p class="text-gray-700 mb-4">
+          I partnered with the head of customer experience to analyze call response data, identify performance bottlenecks, and deliver actionable recommendations to improve speed of answer, resolution consistency, and overall customer satisfaction.
         </p>
+        <a href="https://theophilusehimegbe.github.io/call-center-report" class="text-yellow-400 hover:underline" target="_blank">View Project</a>
       </div>
 
-      <div class="project">
-        <h3>🛒 Store Performance Analysis</h3>
-        <p>
-          Developed a sales performance dashboard using SQL and Power BI. 
-          Included RFM segmentation and churn risk metrics to improve retention strategies.
+      <!-- Project 2: Store Performance -->
+      <div class="p-4 rounded shadow border border-gray-200 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+        <img src="images/store_performance.JPG" alt="Store Performance Project" class="w-full h-48 object-cover mb-4 rounded">
+        <h4 class="text-xl font-semibold mb-2">Store Performance</h4>
+        <p class="text-gray-700 mb-4">
+          Developed a set of interactive Power BI dashboards analyzing revenue performance, customer segmentation (RFM) and churn risk. The project uncovered key drivers of sales growth, customer loyalty patterns and early indicators of attrition, enabling data driven strategies for retention and expansion. Delivered actionable insights that support sustainable business growth and long-term stability.
         </p>
+        <a href="https://medium.com/@Theoofold/store-performace-report-d9e51428b69c" class="text-yellow-400 hover:underline" target="_blank">View Project</a>
       </div>
 
-      <div class="project">
-        <h3>🎓 Education Readiness Study</h3>
-        <p>
-          Analyzed international education survey data to assess students’ readiness for study abroad. 
-          Used Excel and Python for cleaning, visualization, and reporting.
+      <!-- Project 3: Evaluating Readiness for International Education Through Data -->
+      <div class="p-4 rounded shadow border border-gray-200 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+        <img src="images/Study_Abroad.JPG" alt="Study_Abroad" class="w-full h-48 object-cover mb-4 rounded">
+        <h4 class="text-xl font-semibold mb-2">Evaluating Readiness for International Education Through Data</h4>
+        <p class="text-gray-700 mb-4">
+         This analysis uncovered critical gaps from overreliance on a few destination countries to weak alignment between scholarships and student goals, uneven agency success rates and inconsistent academic records. These insights enabled the agency to refine its advising strategy, helping students prepare more effectively, secure stronger placements and boosting the agency’s long-term competitiveness in the international education market.
         </p>
+        <a href="https://medium.com/@Theoofold/evaluating-readiness-for-international-education-through-data-992aa05d31cc" class="text-yellow-400 hover:underline" target="_blank">View Project</a>
       </div>
-    </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>SQL (MySQL, PostgreSQL)</li>
-        <li>Excel (Pivot Tables, Power Query)</li>
-        <li>Power BI (DAX, Data Modeling)</li>
-        <li>Python (pandas, matplotlib)</li>
-        <li>Data Cleaning & Visualization</li>
-      </ul>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>📧 <a href="mailto:ehimegbetheophilus999@gmail.com">ehimegbetheophilus999@gmail.com</a></p>
-      <p>📱 +234 807 850 3414</p>
-    </section>
-  </main>
 
-  <footer>
-    <p>© 2025 Theophilus Ehimegbe. Built with ❤️ using GitHub Pages.</p>
-  </footer>
+<!-- EXPERIENCE SECTION -->
+<section id="experience" class="fade-section py-20 px-4 bg-white">
+<div class="max-w-6xl mx-auto">
+<h3 class="text-3xl font-bold text-yellow-400 mb-8 text-center">Experience</h3>
+<div class="space-y-6">
+<div class="p-6 rounded shadow border border-gray-200">
+<h4 class="text-xl font-semibold mb-2">Data Analyst Intern - EdgeLine Tech Academy</h4>
+<p class="text-gray-700">	Worked with 3+ cross functional teams to gather requirements, shape project scope and align goals with business needs, ensuring strong collaboration and successful delivery.
+  Created detailed reports and presentations using PowerPoint that simplified complex findings and gave stakeholders clear actionable recommendations.
+  Improved data collection and reporting processes, cutting processing time and increasing efficiency. 
+</p>
+</div>
+<div class="p-6 rounded shadow border border-gray-200">
+<h4 class="text-xl font-semibold mb-2">Freelance Data Projects</h4>
+<p class="text-gray-700">	Collaborated with a psychologist to analyze healthcare datasets, uncovering patterns in patient outcomes and behavioral health trends. Conducted data cleaning using Excel (Power Query), transformation and visualization using Excel also and Power BI to identify factors influencing care efficiency and resource allocation. Delivered a joint report and presentation, translating complex findings into actionable insights for psychological and healthcare decision making.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="fade-section bg-white py-20 px-4">
+<div class="max-w-4xl mx-auto text-center">
+<h3 class="text-3xl font-bold text-yellow-400 mb-8">Contact Me</h3>
+<p class="text-gray-700 mb-6">I’d love to hear from you! Whether you have a question or just want to say hi, feel free to reach out.</p>
+<div class="space-y-3 mb-8">
+<p>📞 <a href="tel:+2348078503414" class="hover:text-yellow-400 transition">+234 807 850 3414</a></p>
+<p>✉ <a href="mailto:ehimegbetheophilus999@gmail.com" class="hover:text-yellow-400 transition">ehimegbetheophilus999@gmail.com</a></p>
+</div>
+</div>
+</section>
+
+<!-- SOCIAL ICONS -->
+<div class="flex justify-center space-x-6 text-2xl py-6 bg-white">
+<a href="https://github.com/Theophilusehimegbe" target="_blank" class="hover:text-yellow-400 transition" aria-label="GitHub">
+<i class="fab fa-github"></i>
+</a>
+<a href="https://linkedin.com/in/theophilusehimegbe" target="_blank" class="hover:text-yellow-400 transition" aria-label="LinkedIn">
+<i class="fab fa-linkedin"></i>
+</a>
+<a href="https://x.com/Theoofold" target="_blank" class="hover:text-yellow-400 transition" aria-label="Twitter">
+<i class="fab fa-twitter"></i>
+</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-white py-6 text-center text-gray-500 text-sm border-t border-gray-300">
+© 2025 Theophilus. All rights reserved.
+</footer>
+
+<!-- MENU TOGGLE AND FADE SCRIPT -->
+<script>
+const menuBtn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+menuBtn.addEventListener('click', () => {
+menu.classList.toggle('hidden');
+});
+
+const sections = document.querySelectorAll('.fade-section');
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+} else {
+entry.target.classList.remove('visible');
+}
+});
+}, { threshold: 0.1 });
+sections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
 
